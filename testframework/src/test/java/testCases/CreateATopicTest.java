@@ -7,9 +7,9 @@ public class CreateATopicTest extends BaseTest {
 	@Test
 	public void simpleGoogleSearch() {
 		actions.typeValueInField(searchCriterion, "search.Input");
-		actions.waitForElementVisible("search.Button",5);
+		actions.waitForElementVisible("search.Button",10);
 		actions.clickElement("search.Button");
-		actions.waitForElementVisible("search.Result",5);
+		actions.waitForElementVisible("search.Result",10);
 		actions.assertElementPresent("search.Result");
 	}
 }
