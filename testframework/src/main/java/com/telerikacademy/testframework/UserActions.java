@@ -7,7 +7,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import org.apache.logging.log4j.Logger;
+
 public class UserActions {
+	public static final Logger logger = Utils.LOG;
 	final WebDriver driver;
 
 	public UserActions() {
@@ -23,6 +26,7 @@ public class UserActions {
 	}
 
 	public void clickElement(String key){
+		logger.info("Clicking on element " + key);
 		WebElement element =driver.findElement(By.xpath(Utils.getUIMappingByKey(key)));
 		element.click();
 	}
