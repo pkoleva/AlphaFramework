@@ -18,7 +18,7 @@ public class PropertiesManager {
 			try {
 				props.load(new FileInputStream(url));
 			} catch (IOException ex){
-
+				Utils.LOG.error("Loading properties failed!");
 			}
 			return props;
 		}
